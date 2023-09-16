@@ -11,3 +11,4 @@ This webpage is currently only accessible through Virtual Studio Code's live ser
 8. Enjoy the game!
 # Additional Information
 Project completion date: September 16, 2023.
+First JavaScript Project.
