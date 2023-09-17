@@ -1,27 +1,64 @@
 body {
-  background-color: #1b1b1b;
-  color: #000;
+  background-color: #252440;
+  color: #f2f2f2;
   font-family: Arial;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.css-main-title {
+  color: #f2f2f2;
+  text-align: center;
+  margin-bottom: 20px
+}
+
+.css-page-container {
+  display: grid;
+  grid-template-columns: 502px 502px;
+}
+
+.css-how-to-play {
+  background-color: #f2f2f2;
+  color: #252440;
+  border: 1px solid #f2f2f2; 
+  font-size: 15px;
+  padding: 8px 15px;
+  text-align: center;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  box-shadow: inset 0 0 0 0 #252440;
+  transition: 0s;
 }
 
 .css-container {
-  margin-top: 35px;
-  background-color: #fff;
+  margin-top: 25px;
   text-align: center;
-  padding: 20px;
+  padding: 20px 30px;
+}
+
+.css-container-two {
+  margin-right: 30px;
+  margin-left: 70px;
+  background-color: #fff;
+  padding: 20px 30px;
   border-radius: 10px;
+  width: 350px;
+  height: 260px;
 }
 
 .css-title {  
   font-size: 30px;
   font-weight: bold;
-  color: #000;
+  color: #252440;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .css-instructions {
-  margin-bottom: 35px;
+  margin-bottom: 10px;
+  color: #252440;
 } 
 
 .css-move-icon {
@@ -29,40 +66,43 @@ body {
 }
 
 .css-move-button {
-  background-color: transparent;
-  border: 3px solid #1b1b1b; 
+  background-color: #f2f2f2;
+  border: 3px solid #f2f2f2; 
   width: 120px;
   height: 120px;
   border-radius: 60px;
   margin-right: 10px;
   cursor: pointer;
-  box-shadow: inset 0 0 0 0 #1b1b1b;
+  box-shadow: inset 0 0 0 0 #252440;
   transition: 0s; 
 }
 
+.css-scissors-button {
+  margin-right: 0px;
+}
+
 .css-hover-effect:hover {
-  box-shadow: inset 300px 0 0 0 #1b1b1b;
+  box-shadow: inset 300px 0 0 0 #252440;
+}
+
+.css-win,
+.css-lose,
+.css-tie {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 40px;
 }
 
 .css-win {
-  font-size: 25px;
-  font-weight: bold;
-  margin-top: 50px;
   color: #0bda51;
 }
 
 .css-lose {
-  font-size: 25px;
-  font-weight: bold;
-  margin-top: 50px;
   color: #ff5249;
 }
   
 .css-tie {
-  font-size: 25px;
-  font-weight: bold;
-  margin-top: 50px;
-  color: #3d3d3d;
+  color: #f2f2f2
 }
 
 .css-moves {
@@ -71,30 +111,50 @@ body {
 }
 
 .css-score {
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .css-reset,
 .css-auto-play {
   background-color: transparent;
-  border: 1px solid #000; 
-  color: rgb(25, 25, 25);
+  border: 1px solid #f2f2f2; 
+  color: #f2f2f2;
   font-size: 15px;
   padding: 8px 15px;
   cursor: pointer;
-  margin-bottom: 35px;
-  box-shadow: inset 0 0 0 0 #90dd90;
+  margin-bottom: 15px;
+  box-shadow: inset 0 0 0 0 #0b6623;
   transition: 0s; 
 }
 
 .css-reset-hover:hover {
-  box-shadow: inset 300px 0 0 0 #ff5249;
+  box-shadow: inset 300px 0 0 0 #d0312d;
 }
 
 .css-auto-hover:hover {
-  box-shadow: inset 300px 0 0 0 #0bda51;
+  box-shadow: inset 300px 0 0 0 #0b6623;
 }
 
 .css-auto-on {
-  background-color: #0bda51;
+  background-color: #0b6623;
+}
+
+.css-confirm-button {
+  background-color: transparent;
+  border: 1px solid #f2f2f2; 
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  box-shadow: inset 0 0 0 0 #90dd90;
+  transition: 0s; 
+}
+
+.css-yes-button:hover {
+  box-shadow: inset 300px 0 0 0 #d0312d;
+}
+
+.css-no-button:hover {
+  box-shadow: inset 300px 0 0 0 #0b6623;
 }

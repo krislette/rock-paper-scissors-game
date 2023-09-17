@@ -5,23 +5,27 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="css-container">
-      <p class="css-title">Rock Paper Scissors</p>
-      <p class="css-instructions">Click one of the three buttons below or press "r," "p," or "s", on your keyboard to play!</p>
-      <button class="css-move-button css-hover-effect js-rock-button">
-        <img src="image-rock.png" class="css-move-icon">
-      </button>
-      <button class="css-move-button css-hover-effect js-paper-button">
-        <img src="image-paper.png" class="css-move-icon">
-      </button>
-      <button class="css-move-button css-hover-effect js-scissors-button">
-        <img src="image-scissors.png" class="css-move-icon">
-      </button>
-      <p class="js-result"></p>
-      <p class="css-moves js-moves"></p>
-      <p class="js-score css-score"></p>
-      <button class="css-reset css-reset-hover js-reset-button">Reset Score</button>
-      <button class="css-auto-play css-auto-hover js-auto-play">Auto Play</button>
+    <h1 class="css-main-title">Rock Paper Scissors</h1>
+    <button class="css-how-to-play js-how-to-play">Show Instructions</button>
+    <div class="css-page-container">
+      <div class="js-how-to-play-container"></div>
+      <div class="css-container">
+        <button class="css-move-button css-hover-effect js-rock-button">
+          <img src="image-rock.png" class="css-move-icon">
+        </button>
+        <button class="css-move-button css-hover-effect js-paper-button">
+          <img src="image-paper.png" class="css-move-icon">
+        </button>
+        <button class="css-move-button css-hover-effect css-scissors-button js-scissors-button">
+          <img src="image-scissors.png" class="css-move-icon">
+        </button>
+        <p class="js-result"></p>
+        <p class="css-moves js-moves"></p>
+        <p class="js-score css-score"></p>
+        <button class="css-reset css-reset-hover js-reset-button">Reset Score</button>
+        <button class="css-auto-play css-auto-hover js-auto-play">Auto Play</button>
+        <div class="js-confirmation-message"></div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

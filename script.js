@@ -16,12 +16,17 @@ document.querySelector('.js-scissors-button')
 
 document.querySelector('.js-reset-button')
     .addEventListener('click', () => {
-        resetScore();
+        showMessage();
     });
 
 document.querySelector('.js-auto-play')
     .addEventListener('click', () => {
         autoPlay();
+    });
+
+document.querySelector('.js-how-to-play')
+    .addEventListener('click', () => {
+        showInstructions();
     });
 
 // sets 'r', 'p', and 's' as alternatives for the buttons presented on the screen
@@ -32,6 +37,10 @@ document.body.addEventListener('keydown', (event) => {
         playGame('paper');
     } else if (event.key === 's') {
         playGame('scissors');
+    } else if (event.key === 'a') {
+        autoPlay();
+    } else if (event.key === 'Backspace') {
+        showMessage();
     }
 });
 
@@ -44,6 +53,38 @@ let score = JSON.parse(localStorage.getItem('scoreStorage')) || {
 
 // calls updatescore function to update the score on the screen once the page loads
 updateScoreElement();
+
+let isShown = false;
+
+function showInstructions() {
+    const instructionsElement = document.querySelector('.js-how-to-play-container');
+
+    if (!isShown) {
+        instructionsElement.innerHTML = `
+            <div class="js-container-two css-container-two">
+                <p class="css-title">How to play?</p>
+                <div class="css-instructions">
+                    <p>
+                        1. Start the game by clicking any of the on-screen buttons or use keyboard shortcuts:
+                        "r" for rock, "p" for paper, and "s" for scissors.
+                    </p>
+                    <p>
+                        2. Activate autoplay with the on-screen button or by pressing "a" on your keyboard.
+                    </p>
+                    <p>
+                        3. Reset the score using the on-screen button or the backspace key on your keyboard.
+                    </p>
+                </div>
+            </div>
+        `;
+        isShown = true;
+        document.querySelector('.js-how-to-play').innerHTML = 'Hide Instructions';
+    } else {
+        instructionsElement.innerHTML = ''; 
+        isShown = false;
+        document.querySelector('.js-how-to-play').innerHTML = 'Show Instructions';
+    }
+}
 
 let isAutoPlay = false; // sets autoplay to false to indicate that it is turned off once the page loads
 let intervalID; // sets a variable to the id returned by setInterval()
@@ -58,12 +99,14 @@ function autoPlay() {
         isAutoPlay = true; 
         const autoPlayEle = getAutoPlayElement();
         autoPlayEle.classList.add('css-auto-on');
+        autoPlayEle.innerHTML = 'Stop Playing';
     } else {
         clearInterval(intervalID); // clears the interval which stops the autoplay
 
         isAutoPlay = false;  
         const autoPlayEle = getAutoPlayElement();
         autoPlayEle.classList.remove('css-auto-on');
+        autoPlayEle.innerHTML = 'Auto Play';
     }
 }
 
@@ -172,4 +215,31 @@ function resetScore() {
     score.ties = 0;
     localStorage.removeItem('scoreStorage');
     updateScoreElement();
+}
+
+function showMessage() {
+    document.querySelector('.js-confirmation-message').innerHTML = `
+        <p>
+            Are you sure you want to reset the score?
+            <p>
+                <button class="js-yes-button css-yes-button css-confirm-button">Yes</button>
+                <button class="js-no-button css-no-button css-confirm-button">No</button>
+            </p>
+        </p>
+    `;
+
+    document.querySelector('.js-yes-button')
+        .addEventListener('click', () =>{
+            resetScore();
+            hideMessage();
+        });
+
+    document.querySelector('.js-no-button')
+        .addEventListener('click', () => {
+            hideMessage();
+        });
+}
+
+function hideMessage() {
+    document.querySelector('.js-confirmation-message').innerHTML = '';
 }
