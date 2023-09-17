@@ -12,3 +12,5 @@ This webpage is currently only accessible through Virtual Studio Code's live ser
 # Additional Information
 Project completion date: September 16, 2023.
 First JavaScript Project.
+# Game Snapshot
+![image](https://github.com/krislette/rock-paper-scissors-game/assets/143507354/bb2eb523-0717-409f-a6e4-a84bb9f47672)
