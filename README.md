@@ -7,7 +7,7 @@ This webpage is currently only accessible through Virtual Studio Code's live ser
 4. Organize these files into a single folder.
 5. Open the "index.html" file in Visual Studio Code.
 6. Right-click within the Visual Studio Code editor and choose "Open with Live Server" or use the keyboard shortcut Alt + L, Alt + O.
-7. The game should now be accessible.
+7. The game should now be accessible on your browser.
 8. Enjoy the game!
 # Additional Information
 Project completion date: September 16, 2023.
