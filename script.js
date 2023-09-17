@@ -54,7 +54,7 @@ let score = JSON.parse(localStorage.getItem('scoreStorage')) || {
 // calls updatescore function to update the score on the screen once the page loads
 updateScoreElement();
 
-let isShown = false;
+let isShown = false; // indicates that instructions are hidden when the page first loads
 
 function showInstructions() {
     const instructionsElement = document.querySelector('.js-how-to-play-container');
@@ -76,11 +76,11 @@ function showInstructions() {
                     </p>
                 </div>
             </div>
-        `;
+        `; // generates html using js for the instructions element
         isShown = true;
         document.querySelector('.js-how-to-play').innerHTML = 'Hide Instructions';
     } else {
-        instructionsElement.innerHTML = ''; 
+        instructionsElement.innerHTML = ''; // removes the instructions from the webpage
         isShown = false;
         document.querySelector('.js-how-to-play').innerHTML = 'Show Instructions';
     }
