@@ -226,7 +226,7 @@ function showMessage() {
                 <button class="js-no-button css-no-button css-confirm-button">No</button>
             </p>
         </p>
-    `;
+    `; // generates html to show the confirmation message
 
     document.querySelector('.js-yes-button')
         .addEventListener('click', () =>{
@@ -241,5 +241,5 @@ function showMessage() {
 }
 
 function hideMessage() {
-    document.querySelector('.js-confirmation-message').innerHTML = '';
+    document.querySelector('.js-confirmation-message').innerHTML = ''; // hides the confirmation message by asigning an empty string
 }
